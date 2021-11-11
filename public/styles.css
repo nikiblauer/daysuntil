@@ -1,0 +1,145 @@
+body {
+  color: #fff;
+  background-color: #000;
+}
+
+
+
+.swiper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.swiper-slide {
+  overflow: scroll;
+}
+
+#main {
+  text-align: center;
+}
+
+
+
+.main-content {
+  text-align: center;
+  margin: auto;
+  margin-top: 60%;
+}
+
+.days-subheading {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.days-heading {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 8rem;
+  margin: 0;
+  margin-bottom: 3%;
+}
+
+
+
+/* LINKE SEITE VON DER WEBAPP */
+#left {
+  text-align: center;
+}
+
+.left-content {
+  text-align: center;
+}
+
+.big-heading {
+  font-weight: 500;
+  font-size: 8rem;
+  margin: auto;
+  margin: 5% 0 15%;
+}
+
+.days-list {
+  padding: 0;
+  max-width: 100%;
+}
+
+.list-item {
+  width: 90%;
+  height: 300px;
+  line-height: 300px;
+  margin: auto;
+  margin-bottom: 5%;
+  border: 5px solid #fff;
+  border-radius: 12.5px;
+  background-color: #000;
+  color: #fff;
+  list-style-type: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 5rem;
+}
+
+/* LINKE SEITE VON DER WEBAPP */
+#right {
+  text-align: center;
+}
+
+.right-content {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 60%;
+
+
+}
+
+.datename-input {
+  display: block;
+  text-align: center;
+  width: 80%;
+  height: 76px;
+  color: #fff;
+  background-color: #000;
+  border: 0;
+  outline: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 4rem;
+  padding: 0;
+
+  margin: auto;
+
+
+}
+
+.datepicker {
+  display: block;
+  width: 80%;
+  height: 153px;
+  color: #fff;
+  background-color: #000;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 8rem;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 3%;
+
+}
+
+
+.new-date-btn {
+  margin-top: 30%;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 6rem;
+
+  color: #fff;
+  background: #000;
+
+  border: 5px solid #fff;
+  border-radius: 12.5px;
+}

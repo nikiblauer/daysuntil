@@ -17,16 +17,29 @@ function DaysUntilDate(name, date){
   this.date = date;
 }
 
+function getDays(date) {
+  let now = new Date();
+  let endDate = new Date(date);
+  let differenceInTime = (endDate.getTime() - now.getTime());
+  let days = differenceInTime / (1000*60*60*24);
+
+
+  return Math.round(days);
+}
+
 let daysList = [];
-daysList.push(new DaysUntilDate(_.startCase("Neujahr"), 50));
-daysList.push(new DaysUntilDate(_.startCase("Geburtstag"), 50));
-daysList.push(new DaysUntilDate(_.startCase("Sommerferien"), 200));
+daysList.push(new DaysUntilDate(_.startCase("Neujahr"), "01-01-2022"));
+daysList.push(new DaysUntilDate(_.startCase("Geburtstag"), "12-15-2021"));
+daysList.push(new DaysUntilDate(_.startCase("Sommerferien"), "06-07-2022"));
 
 
 
 
 app.get("/", function(req, res){
-  let currentDay = daysList[0];
+  let currentDay = Object.assign({}, daysList[0]);
+
+  currentDay.date = getDays(currentDay.date)
+
 
   const options = {
     currentDay: currentDay,
@@ -41,14 +54,15 @@ app.get("/:name", function(req, res){
   let currentDay = null;
   daysList.forEach(function(day){
     if(day.name === dayName){
-      currentDay = day;
+      currentDay = Object.assign({}, day);
     }
   });
 
   if(currentDay === null){
-    currentDay = daysList[0];
+    currentDay = Object.assign({}, daysList[0]);
   }
 
+  currentDay.date = getDays(currentDay.date)
   const options = {
     currentDay: currentDay,
     daysList: daysList,
@@ -63,12 +77,25 @@ app.listen(port, function(){
 });
 
 app.post("/", function(req, res){
+  if(req.body.dateName === ""){
+    res.redirect("/");
+    return;
+  }
   const dateName = _.startCase(req.body.dateName);
   const date = req.body.date;
 
   let daysUntilDate = new DaysUntilDate(dateName, date);
 
-  daysList.push(daysUntilDate);
+  let contains = false;
+  daysList.forEach(function(day){
+    if(day.name === dateName){
+      contains = true;
+    }
+  });
+
+  if(contains === false){
+    daysList.push(daysUntilDate);
+  }
 
 
   res.redirect("/" + dateName);

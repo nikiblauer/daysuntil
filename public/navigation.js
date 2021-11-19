@@ -5,9 +5,16 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: false,
 
+
+
   // If we need pagination
+  // pagination: {
+  //   el: '.swiper-pagination',
+  // },
+
   pagination: {
     el: '.swiper-pagination',
+    type: 'bullets',
   },
 
   // Navigation arrows

@@ -143,3 +143,9 @@ body {
   border: 5px solid #fff;
   border-radius: 12.5px;
 }
+
+
+.btn:active{
+  background-color: #fff;
+  color: #000;
+}

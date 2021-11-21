@@ -1,7 +1,12 @@
 body {
+  font-family: 'Roboto', sans-serif;
+
+
   color: #fff;
   background-color: #000;
+  margin: 0;
 }
+
 
 
 
@@ -19,7 +24,6 @@ body {
 }
 
 
-
 .main-content {
   text-align: center;
   margin: auto;
@@ -27,18 +31,17 @@ body {
 }
 
 .days-subheading {
-  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 4rem;
+
   margin: 0;
 }
 
 .days-heading {
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 8rem;
-  margin: 0;
-  margin-bottom: 3%;
+
+  margin: 0 0 3% 0;
 }
 
 
@@ -55,6 +58,7 @@ body {
 .big-heading {
   font-weight: 500;
   font-size: 8rem;
+
   margin: auto;
   margin: 5% 0 15%;
 }
@@ -65,22 +69,66 @@ body {
 }
 
 .list-item {
+  font-weight: 300;
+  font-size: 5rem;
+
+
+
   width: 90%;
   height: 300px;
   line-height: 300px;
   margin: auto;
   margin-bottom: 5%;
+
   border: 5px solid #fff;
   border-radius: 12.5px;
-  background-color: #000;
-  color: #fff;
   list-style-type: none;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 5rem;
+
 }
 
-/* LINKE SEITE VON DER WEBAPP */
+.list-item:active {
+  background-color: #fff;
+  color: #000;
+}
+
+
+.delete {
+  background-color: #000;
+  color: red;
+  border: 5px solid red;
+}
+
+.delete:active {
+  background-color: red;
+  color: #000;
+}
+
+.edit-btn {
+  background-color: #000;
+  color: #fff;
+
+  font-weight: 500;
+  font-size: 4rem;
+
+
+  border: 5px solid #fff;
+  border-radius: 12.5px;
+
+  margin: 10% 0;
+}
+
+.edit-btn:active{
+  background-color: #fff;
+  color: #000;
+}
+
+.edit-btn-toggled {
+  background-color: #fff;
+  color: #000;
+  
+}
+
+/* RECHTE SEITE VON DER WEBAPP */
 #right {
   text-align: center;
 }
@@ -88,24 +136,29 @@ body {
 .right-content {
   text-align: center;
   width: 90%;
+
   margin: auto;
   margin-top: 60%;
 
 
 }
 
+
+
 .datename-input {
   display: block;
   text-align: center;
   width: 80%;
   height: 76px;
-  color: #fff;
-  background-color: #000;
-  border: 0;
-  outline: 0;
-  font-family: 'Roboto', sans-serif;
+
+  color: inherit;
+  background-color: inherit;
+
   font-weight: 300;
   font-size: 4rem;
+
+  border: 0;
+  outline: 0;
   padding: 0;
 
   margin: auto;
@@ -117,12 +170,16 @@ body {
   display: block;
   width: 80%;
   height: 153px;
-  color: #fff;
-  background-color: #000;
-  border: 0;
+
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 8rem;
+
+
+  color: inherit;
+  background-color: inherit;
+  border: 0;
+
   padding: 0;
   margin: auto;
   margin-bottom: 3%;
@@ -133,17 +190,21 @@ body {
 .new-date-btn {
   margin-top: 30%;
 
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 6rem;
 
-  color: #fff;
-  background: #000;
+  color: inherit;
+  background: inherit;
 
   border: 5px solid #fff;
   border-radius: 12.5px;
 }
 
+
+.btn {
+  /* background-color: #000;
+  color: #fff; */
+}
 
 .btn:active{
   background-color: #fff;

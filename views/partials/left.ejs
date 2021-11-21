@@ -1,13 +1,13 @@
 
 <div id="left">
+  <h1 class="big-heading">Übersicht</h1>
   <div class="left-content">
-    <h1 class="big-heading">Übersicht</h1>
     <ul class="days-list">
       <% daysList.forEach(function(item){ %>
-         <li class="btn list-item"> <%= item.name %> </li>
+         <li class="list-item"> <%= item.name %> </li>
       <% }); %>
-
       </ul>
-  </div>
 
+    <button class="edit-btn" type="button" name="edit-btn">Delete</button>
+  </div>
 </div>

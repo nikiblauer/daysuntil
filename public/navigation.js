@@ -40,9 +40,6 @@ var toggled = 0;
 
 
 $(".list-item").on("click", function(e){
-
-
-
   let name = event.target.innerHTML;
   name = name.substring(1, name.length-1);
   let url = cutUrl(window.location.href, 3);

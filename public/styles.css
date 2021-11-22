@@ -63,6 +63,13 @@ body {
   margin: 5% 0 15%;
 }
 
+.mid-heading{
+  font-weight: 400;
+  font-size: 6rem;
+
+  margin: auto;
+}
+
 .days-list {
   padding: 0;
   max-width: 100%;
@@ -125,7 +132,7 @@ body {
 .edit-btn-toggled {
   background-color: #fff;
   color: #000;
-  
+
 }
 
 /* RECHTE SEITE VON DER WEBAPP */

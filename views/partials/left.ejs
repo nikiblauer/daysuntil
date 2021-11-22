@@ -2,12 +2,17 @@
 <div id="left">
   <h1 class="big-heading">Übersicht</h1>
   <div class="left-content">
-    <ul class="days-list">
-      <% daysList.forEach(function(item){ %>
-         <li class="list-item"> <%= item.name %> </li>
-      <% }); %>
+    <% if(daysList !== null) { %>
+      <ul class="days-list">
+        <% daysList.forEach(function(item){ %>
+           <li class="list-item"> <%= item.name %> </li>
+        <% }); %>
       </ul>
 
-    <button class="edit-btn" type="button" name="edit-btn">Delete</button>
+      <button class="edit-btn" type="button" name="edit-btn">Delete</button>
+    <% } else { %>
+      <h1 class="mid-heading">Noch keine Einträge.</h1>
+    <% } %>
+
   </div>
 </div>

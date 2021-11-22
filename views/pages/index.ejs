@@ -33,8 +33,16 @@
         <div id="main">
           <h1 class="big-heading">Days Until</h1>
           <div class="main-content">
-            <h1 class="days-heading"> <%= currentDay.date %> Tage</h1>
-            <h2 class="days-subheading"> <%= currentDay.name %> </h2>
+            <% if(currentDay !== null) { %>
+              <% if(currentDay.date > 0) { %>
+                <h1 class="days-heading"> <%= currentDay.date %> Tage</h1>
+              <% } else { %>
+                <h1 class="days-heading"> Abgelaufen </h1>
+              <% } %>
+              <h2 class="days-subheading"> <%= currentDay.name %> </h2>
+            <% } else { %>
+              <h1 class="mid-heading">Wischen sie nach links, um ein neues Datum anzulegen.</h1>
+            <% } %>
           </div>
         </div>
       </div>
@@ -44,7 +52,7 @@
     </div>
     <div class="swiper-scrollbar"></div>
   </div>
-  
+
     <script type="text/javascript" src="navigation.js"></script>
   </body>
 </html>
